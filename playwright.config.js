@@ -19,7 +19,7 @@ export default defineConfig({
   ],
 
   use: {
-    headless: false,          // open browser
+    headless: process.env.CI ? true : false,          // open browser
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure'
