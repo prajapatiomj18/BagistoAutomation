@@ -73,6 +73,68 @@ class AdminLocators {
         this.toastMessage = page.locator('//div[contains(@class,"fixed") and contains(@class,"top-5")]');
         this.loader = page.locator('//*[contains(@class,"loader")]');
         this.breadcrumb = page.locator('//nav[@aria-label="Breadcrumb"]');
+
+        // --- GRID & NAVIGATION ---
+        this.salesMenu = page.locator('//p[contains(@class, "group-[.sidebar-collapsed]/container:hidden") and contains(text(), " Sales ")]');
+        this.ordersMenu = page.locator('//a[@href="https://commerce.bagisto.com/admin/sales/orders" and contains(text(), " Orders ")]');
+        this.ordersGrid = page.locator('//div[contains(@class, "transition-all hover:bg-gray-50 ")]');
+        this.orderIdColumn = page.locator('(//p[@class="text-sm sm:text-base font-semibold text-gray-800 dark:text-white"])[1]');
+        this.statusLabel = page.locator('//p[@class="label-pending"]');
+        this.grandTotalColumn = page.locator('(//p[@class="text-sm sm:text-base font-semibold text-gray-800 dark:text-white"])[2]');
+        this.customerEmailColumn = page.locator('(//p[@class="text-xs sm:text-sm text-gray-600 dark:text-gray-300"])[4]');
+        this.productThumbnail = page.locator('(//img[@class="h-full w-full rounded"])[1]');
+        this.productQtyBadge = page.locator('(//span[@class="absolute bottom-px rounded-full bg-darkPink px-1.5 text-xs font-bold leading-normal text-white ltr:left-px rtl:right-px"])[1]');
+        this.viewOrderArrow = page.locator('//span[contains(@class, "icon-sort-right rtl:icon-sort-left cursor-pointer p-1.5 ")]');
+
+        // --- SEARCH & FILTER ---
+        this.orderSearchInput = page.locator('//input[@name="search"]');
+        this.paymentMethod = page.locator('//p[contains(text(), "Pay By")]');
+        this.filterButton = page.locator('//span[contains(text()," Filter ")]');
+        this.filterSidebar = page.locator('//p[contains(text()," Filters ")][1]');
+        this.statusDropdown = page.locator('(//span[contains(text(), "Select")])[1]');
+        this.applyFilterBtn = page.locator('//button[contains(text()," Apply Filters ")]');
+        this.saveFilterBtn = page.locator('//button[contains(text(),"Save Filter")]');
+        this.todayFilter = page.locator('//p[contains(text(),"Today")]');
+        this.thisMonthFilter = page.locator('//p[contains(text(),"This Month")]');
+        this.startDateFilter = page.locator('//input[@name="created_at[from]"]');
+        this.endDateFilter = page.locator('//input[@name="created_at[to]"]');
+
+        // --- EXPORT & PAGINATION ---
+        this.exportBtn = page.locator('//button[contains(text()," Export ")]');
+        this.exportSelect = page.locator('//select[@name="format"]');
+        this.exportCSV = page.locator('//option[@value="csv"]');
+        this.exportXLS = page.locator('//option[@value="xls"]');
+        this.exportDownloadBtn = page.locator('//button[@class="primary-button" and contains(text(),"Export")]');
+        this.perPageDropdown = page.locator('//button[contains(@class, "text-center leading-6 text-gray-600 transition-all ")]');
+        this.select20PerPage = page.locator('//li[text()="20"]');
+        this.nextPageBtn = page.locator('//span[@class="icon-sort-right rtl:icon-sort-left text-2xl"]');
+
+        // --- CREATE ORDER MODAL ---
+        this.createOrderBtn = page.locator('//button[contains(text(), " Create Order ")]');
+        this.customerSearch = page.locator('//input[@placeholder="Search by email or name"]');
+        this.noCustomerFound = page.locator('//p[contains(text(),"No customers found")]');
+        this.createCustomerBtn = page.locator('//button[contains(text(), " Create Customer ")]');
+
+        // --- ORDER DETAILS PAGE ---
+        this.orderHeader = page.locator('//p[contains(text(), "Order #")]');
+        this.invoiceBtn = page.locator('//div[contains(text()," Invoice ")]');
+        this.shipBtn = page.locator('//div[contains(text()," Ship ")]');
+        this.cancelOrderBtn = page.locator('//a[contains(text()," Cancel ")]');
+        this.productName = page.locator('(//p[@class="break-all text-base font-semibold text-gray-800 dark:text-white"])[1]');
+        this.subtotal = page.locator('(//p[@class="font-semibold !leading-5 text-gray-600 dark:text-gray-300"])[2]');
+        this.shippingHandling = page.locator('(//p[@class="font-semibold !leading-5 text-gray-600 dark:text-gray-300"])[3]');
+        this.taxAmount = page.locator('(//p[@class="!leading-5 text-gray-600 dark:text-gray-300"])[3]');
+        this.customerInfo = page.locator('//p[contains(@class, "p-2.5 text-base font-semibold") and contains(text(), " Customer ")]');
+        this.orderInformationCard = page.locator('//p[contains(@class, "p-2.5 text-base font-semibold") and contains(text(), " Order Information ")]');
+        this.shippingMethod = page.locator('//p[contains(@class, "text-gray-600 dark:text-gray-300") and contains(text(), " Shipping Method ")]');
+        this.grandTotal = page.locator('(//p[@class="text-base font-semibold !leading-5 text-gray-800 dark:text-white"])[2]');
+        this.totalDue = page.locator('(//p[@class="!leading-5 text-gray-600 dark:text-gray-300"])[11]');
+        this.billingAddress = page.locator('//p[contains(text(),"Billing Address")]');
+        this.shippingAddress = page.locator('//p[contains(text(),"Shipping Address")]');
+        this.commentBox = page.locator('//textarea[contains(@placeholder,"comment")]');
+        this.notifyCustomerCheckbox = page.locator('//span[contains(@class, "icon-uncheckbox peer-checked:icon-checked")]');
+        this.submitCommentBtn = page.locator('//button[contains(text(),"Submit Comment")]');
+        this.commentHistory = page.locator('//p[@class="break-all text-base leading-6 text-gray-800 dark:text-white"]');
     }
 }
 
