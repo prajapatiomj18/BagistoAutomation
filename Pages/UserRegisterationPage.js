@@ -29,9 +29,9 @@ class UserRegistrationPage {
     }
 
     // Register with optional newsletter & agreement
-    async submitRegistration({ newsletter = true, agreement = true } = {}) {
+    async submitRegistration({ newsletter = true } = {}) {
         if (newsletter) await this.common.clickElement(this.loc.registerNewsletter);
-        if (agreement) await this.common.clickElement(this.loc.registerAgreement);
+        // if (agreement) await this.common.clickElement(this.loc.registerAgreement);
         await this.common.clickElement(this.loc.registerButton);
     }
 

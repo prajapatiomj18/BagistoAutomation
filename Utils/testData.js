@@ -23,7 +23,7 @@ module.exports = {
     REGISTER: {
         FIRSTNAME: 'Om',
         LASTNAME: 'Prajapati',
-        EMAIL: 'ohmprajapati@gmail.com',
+        EMAIL: 'ommmprajapati@gmail.com',
         PASSWORD: '123456',
         CONFIRMPASSWORD: '123456'
     },

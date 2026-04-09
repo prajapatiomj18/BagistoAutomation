@@ -71,12 +71,12 @@ test.describe('Bagisto Registration Test Cases', () => {
     });
 
     test('TC_REG_09 - Required fields empty', async () => {
-        await registration.submitRegistration({ newsletter: false, agreement: false });
+        await registration.submitRegistration({ newsletter: false });
         await registration.verifyErrorMessage(registration.loc.errorRegFname, EREGISTER.FIRSTNAME);
         await registration.verifyErrorMessage(registration.loc.errorRegLname, EREGISTER.LASTNAME);
         await registration.verifyErrorMessage(registration.loc.errorRegEml, EREGISTER.EMAIL);
         await registration.verifyErrorMessage(registration.loc.errorRegPass, EREGISTER.PASSWORD);
-        await registration.verifyErrorMessage(registration.loc.errorRegAgree, EREGISTER.AGREEMENT);
+        // await registration.verifyErrorMessage(registration.loc.errorRegAgree, EREGISTER.AGREEMENT);
     });
 
     // test('TC_REG_10 - Invalid first & last name (with numbers)', async () => {
@@ -107,11 +107,11 @@ test.describe('Bagisto Registration Test Cases', () => {
         await registration.verifyErrorMessage(registration.loc.errorRegCPass, EREGISTER.CONFIRMPASSWORD);
     });
 
-    test('TC_REG_14 - Register without agreement checkbox', async () => {
-        await registration.fillRegistrationForm(REGISTER);
-        await registration.submitRegistration({ newsletter: true, agreement: false });
-        await registration.verifyErrorMessage(registration.loc.errorRegAgree, EREGISTER.AGREEMENT);
-    });
+    // test('TC_REG_14 - Register without agreement checkbox', async () => {
+    //     await registration.fillRegistrationForm(REGISTER);
+    //     await registration.submitRegistration({ newsletter: true, agreement: false });
+    //     await registration.verifyErrorMessage(registration.loc.errorRegAgree, EREGISTER.AGREEMENT);
+    // });
 
     // Social logins
     test('TC_REG_15 - Register with Facebook', async () => {

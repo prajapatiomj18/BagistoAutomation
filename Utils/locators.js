@@ -3,7 +3,7 @@ class Locators {
         this.page = page;
 
         // General
-        this.Logo = page.locator('//img[@alt="Bagisto Commerce v2.3.11"]');
+        this.Logo = page.locator('//img[contains(@alt, "Bagisto Commerce")]');
         this.profileLink = page.locator('//span[@aria-label="Profile"]');
         this.acceptCookieButton = page.locator('//button[contains(text(),"Accept")]');
 
@@ -85,10 +85,10 @@ class Locators {
         this.dashboardTopCollection = page.locator('//div[@class="top-collection-header"]//h2[contains(text(), "our new additions!")]');
 
         // Product (not first product specifically, pick visible one)
-        this.WomenProductCard = page.locator('//img[@alt="Classic Women Blazer"]'); 
-        this.MenProductCard = page.locator('//img[@alt="Comfort Fit Jacket"]'); 
-        this.KidProductCard = page.locator('//img[@alt="Mini Fashion Jacket"]'); 
-        this.TicketProductCard = page.locator('//img[@alt="Doctor Consultation Appointment"]'); 
+        this.WomenProductCard = page.locator('//img[@id="image-57"]'); 
+        this.MenProductCard = page.locator('//img[@id="image-77"]'); 
+        this.KidProductCard = page.locator('//img[@id="image-65"]'); 
+        this.TicketProductCard = page.locator('//img[@id="image-53"]'); 
         this.TopCollectionProductCard = page.locator('(//img[@alt="The game with our new additions!"])[1]');
         this.addToCartButton = page.locator('(//button[contains(text(),"Add To Cart")])[2]');
         this.addToWishlistButton = page.locator('(//span[@aria-label="Add To Wishlist"])[2]');

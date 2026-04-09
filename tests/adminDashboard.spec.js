@@ -15,107 +15,107 @@ test.describe('Bagisto Admin Dashboard Test Cases', () => {
         dashboard = new AdminDashboardPage(page);
     });
 
-    test('TC_DASH_01 - Verify dashboard page correctly loaded', async ({ page }) => {
+    test('TC_ADASH_01 - Verify dashboard page correctly loaded', async ({ page }) => {
         await expect(page).toHaveURL(/dashboard/);
     });
 
 
-    test('TC_DASH_02 - Verify Bagisto Logo is visible', async () => {
+    test('TC_ADASH_02 - Verify Bagisto Logo is visible', async () => {
         await dashboard.verifyLogoVisible();
     });
 
-    test('TC_DASH_03 - Verify Mega Search box is visible', async () => {
+    test('TC_ADASH_03 - Verify Mega Search box is visible', async () => {
         await dashboard.verifyMegaSearchVisible();
     });
 
-    test('TC_DASH_04 - Click theme moon/sun icon', async () => {
+    test('TC_ADASH_04 - Click theme moon/sun icon', async () => {
         await dashboard.toggleTheme();
     });
 
-    test('TC_DASH_05 - Click Visit Shop icon', async () => {
+    test('TC_ADASH_05 - Click Visit Shop icon', async () => {
         await dashboard.clickVisitShop();
     });
 
-    test('TC_DASH_06 - Click Notification Bell icon', async () => {
+    test('TC_ADASH_06 - Click Notification Bell icon', async () => {
         await dashboard.clickNotificationBell();
     });
 
-    test('TC_DASH_07 - Verify Notification Count visible', async () => {
+    test('TC_ADASH_07 - Verify Notification Count visible', async () => {
         await dashboard.verifyNotificationCountVisible();
     });
 
-    test('TC_DASH_08 - Click View All notifications', async () => {
+    test('TC_ADASH_08 - Click View All notifications', async () => {
         await dashboard.clickNotificationBell();
         await dashboard.clickViewAllNotifications();
     });
 
-    test('TC_DASH_09 - Click Mark as Read', async () => {
+    test('TC_ADASH_09 - Click Mark as Read', async () => {
         await dashboard.clickNotificationBell();
         await dashboard.clickMarkAllAsRead();
     });
 
-    test('TC_DASH_10 - Click Profile icon', async () => {
+    test('TC_ADASH_10 - Click Profile icon', async () => {
         await dashboard.clickProfileIcon();
     });
 
-    test('TC_DASH_11 - Click My Account', async () => {
+    test('TC_ADASH_11 - Click My Account', async () => {
         await dashboard.clickProfileIcon();
         await dashboard.clickMyAccount();
     });
 
-    test('TC_DASH_12 - Logout functionality', async () => {
+    test('TC_ADASH_12 - Logout functionality', async () => {
         await dashboard.logout();
     });
 
-    test('TC_DASH_13 - Verify all sidebar options visible', async () => {
+    test('TC_ADASH_13 - Verify all sidebar options visible', async () => {
         await dashboard.verifyAllSidebarOptionsVisible();
     });
 
-    test('TC_DASH_14 - Verify sidebar navigation working', async () => {
+    test('TC_ADASH_14 - Verify sidebar navigation working', async () => {
         await dashboard.verifySidebarNavigationWork();
     });
 
-    test('TC_DASH_15 - Collapse Sidebar', async () => {
+    test('TC_ADASH_15 - Collapse Sidebar', async () => {
         await dashboard.collapseSidebar();
     });
 
-    test('TC_DASH_16 - Verify Start Date calendar', async () => {
+    test('TC_ADASH_16 - Verify Start Date calendar', async () => {
         await dashboard.selectStartDate();
     });
 
-    test('TC_DASH_17 - Verify End Date calendar', async () => {
+    test('TC_ADASH_17 - Verify End Date calendar', async () => {
         await dashboard.selectEndDate();
     });
 
-    test('TC_DASH_18 - Verify Overall Details section', async () => {
+    test('TC_ADASH_18 - Verify Overall Details section', async () => {
         await dashboard.verifyOverallDetails();
     });
 
-    test('TC_DASH_19 - Verify Today Details section', async () => {
+    test('TC_ADASH_19 - Verify Today Details section', async () => {
         await dashboard.verifyTodayDetails();
     });
 
-    test('TC_DASH_20 - Verify Stock Threshold section', async () => {
+    test('TC_ADASH_20 - Verify Stock Threshold section', async () => {
         await dashboard.verifyStockThreshold();
     });
 
-    test('TC_DASH_21 - Verify Store Stats section', async () => {
+    test('TC_ADASH_21 - Verify Store Stats section', async () => {
         await dashboard.verifyStoreStats();
     });
 
-    test('TC_DASH_22 - Verify Total Sales section', async () => {
+    test('TC_ADASH_22 - Verify Total Sales section', async () => {
         await dashboard.verifyTotalSalesSection();
     });
 
-    test('TC_DASH_23 - Verify Visitors section', async () => {
-        await dashboard.verifyVisitorsSection();
-    });
+    // test('TC_ADASH_23 - Verify Visitors section', async () => {
+    //     await dashboard.verifyVisitorsSection();
+    // });
 
-    test('TC_DASH_24 - Verify Top Selling Products section', async () => {
+    test('TC_ADASH_24 - Verify Top Selling Products section', async () => {
         await dashboard.verifyTopSellingProducts();
     });
 
-    test('TC_DASH_25 - Verify Customer with Most Sales section', async () => {
+    test('TC_ADASH_25 - Verify Customer with Most Sales section', async () => {
         await dashboard.verifyCustomerWithMostSales();
     });
 

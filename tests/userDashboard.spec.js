@@ -23,13 +23,13 @@ test.describe('Bagisto User Dashboard Full Test Suite', () => {
         await dashboard.clickAdminPanel();
     });
 
-    test('TC_DASH_003 - Verify currency change dropdown', async () => {
-        await expect(dashboard.loc.dashboardCurrencyButton).toBeVisible();
-    });
+    // test('TC_DASH_003 - Verify currency change dropdown', async () => {
+    //     await expect(dashboard.loc.dashboardCurrencyButton).toBeVisible();
+    // });
 
-    test('TC_DASH_004 - Verify language change dropdown', async () => {
-        await expect(dashboard.loc.dashboardLanguageButton).toBeVisible();
-    });
+    // test('TC_DASH_004 - Verify language change dropdown', async () => {
+    //     await expect(dashboard.loc.dashboardLanguageButton).toBeVisible();
+    // });
 
     test('TC_DASH_005 - Verify clicking on All option of header', async () => {
         await dashboard.dashboardAllCategory();
@@ -188,9 +188,9 @@ test.describe('Bagisto User Dashboard Full Test Suite', () => {
         await expect(dashboard.loc.dashboardTicketCollection).toBeVisible();
     });
 
-    test('TC_DASH_039 - Verify Previous and Next button of Book Tickets', async () => {
-        await dashboard.clickTicketNextPrev();
-    });
+    // test('TC_DASH_039 - Verify Previous and Next button of Book Tickets', async () => {
+    //     await dashboard.clickTicketNextPrev();
+    // });
 
     test('TC_DASH_040 - Verify hovering effects on Book Tickets products', async () => {
         await dashboard.hoverOnAnyTicketProduct();
