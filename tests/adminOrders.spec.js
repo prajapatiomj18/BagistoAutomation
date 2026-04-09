@@ -16,7 +16,7 @@ test.describe('Bagisto Admin Orders Test Cases', () => {
     });
 
     test('TC_ORD_01 - Verify Orders grid accessibility', async () => {
-        await expect(orders.locators.ordersGrid).toBeVisible();
+        await expect(orders.locators.ordersGrid.first()).toBeVisible();
     });
 
     test('TC_ORD_02 - Verify Search bar visibility and placeholder', async () => {
@@ -59,7 +59,7 @@ test.describe('Bagisto Admin Orders Test Cases', () => {
     });
 
     test('TC_ORD_09 - Verify Payment Method visibility', async () => {
-        await expect(orders.locators.paymentMethod).toBeVisible();
+        await expect(orders.locators.paymentMethod.first()).toBeVisible();
     });
 
     test('TC_ORD_10 - Verify Customer Identity details', async () => {
