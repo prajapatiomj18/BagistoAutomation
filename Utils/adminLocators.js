@@ -37,7 +37,7 @@ class AdminLocators {
         this.myAccountOption = page.locator('//a[contains(text(),"My Account")]');
         this.logoutButton = page.locator('//a[contains(text(),"Logout")]');
 
-        // 📚 SIDEBAR
+        // SIDEBAR
         this.sidebarDashboard = page.locator('//a//p[contains(text(), " Dashboard ")]');
         this.sidebarSales = page.locator('//a//p[contains(text(), " Sales ")]');
         this.sidebarCatalog = page.locator('//a//p[contains(text(), " Catalog ")]');
