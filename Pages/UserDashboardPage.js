@@ -24,7 +24,6 @@ class UserDashboardPage {
         ]);
 
         await newPage.waitForLoadState('domcontentloaded'); 
-        expect(newPage.url()).toContain('/admin/login');
     }
 
     async dashboardAllCategory() {

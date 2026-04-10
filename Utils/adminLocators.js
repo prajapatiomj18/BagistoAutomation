@@ -35,7 +35,7 @@ class AdminLocators {
         this.profileIcon = page.locator('//button[contains(@class,"rounded-full bg-blue-400")]');
         this.profileDropdown = page.locator('//div[contains(@class,"dropdown")]');
         this.myAccountOption = page.locator('//a[contains(text(),"My Account")]');
-        this.logoutButton = page.locator('//a[contains(text(),"Logout") or contains(text(),"Sign Out")]');
+        this.logoutButton = page.locator('//a[contains(text(),"Logout")]');
 
         // 📚 SIDEBAR
         this.sidebarDashboard = page.locator('//a//p[contains(text(), " Dashboard ")]');
